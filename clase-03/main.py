@@ -61,3 +61,54 @@ print(f"El total de la lista uno es: {resultado_uno}")
 print("----------------------------------")
 resultado_dos = sumar_lista(lista_dos)
 print(f"El total de la lista dos es: {resultado_dos}" )
+
+""" 
+Enunciado:
+----------
+Una persona anota los gastos del día en una lista de números
+
+Se pide:
+    - Guardar los gastos en una lista
+    - Calcular el gasto total
+    - Calcular el gasto promedio 
+    - Mostrar ambos valores por pantalla
+ """
+
+# MVC
+gastos = [1200, 650, 850, 450] # Modelos
+
+# Controlador
+total = sum(gastos)
+cant_elementos = len(gastos)
+promedio = total / cant_elementos
+
+# Vista
+print("Gasto total:", total)
+print("Gasto promedio:", promedio)
+
+""" 
+Enunciado:
+----------
+Una persona anota los gastos del día en una lista de números
+
+Se debe:
+    - verificar que la lista no esté vacía
+    - Verificar que no haya valores negativos
+    - Calcular el gasto total si los datos son válidos
+    - Calcular el gasto promedio si los datos son válidos
+    - Mostrar ambos valores por pantalla
+"""
+
+gastos = [1200, 650, 850, 450]
+cant_elementos = len(gastos)
+val_minimo = min(gastos)
+
+if cant_elementos == 0:
+    print("No hay gastos cargados")
+elif val_minimo < 0:
+    print("Error: hay gastos negativos.")
+else: 
+    total = sum(gastos)
+    promedio = total / cant_elementos
+    print("Gasto total:", total)
+    print("Gastos promedio:", promedio)
