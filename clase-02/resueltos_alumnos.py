@@ -274,3 +274,225 @@ match Tipo_de_cambio:
         print(f"Con {Monto} pesos se pueden comprar {Monto_final:.2f} euros")
     case _:
         print("Tipo de cambio inválido")
+
+# -----------------------------------------------
+# -----------------------------------------------
+# -----------------------------------------------
+
+# Thiago
+numeros = [10, 22, 55, 2, 88, 7]
+suma = 0
+promedio = 0
+print('Recorrido de lista')
+for valor in numeros:
+    print(valor)
+    suma = suma + valor
+promedio = round(suma/(len(numeros)), 2)
+print(f'\nLa suma de los números dentro de la lista es: {suma} \n')
+print(f'El promedio de los números dentro de la lista es: {promedio} \n')
+
+# Sasha
+numeros = [ 1, 2, 3, 4, 5, 6 ]
+print("Números de la lista: ")
+for numero in numeros:
+    print(numero)
+suma = sum(numeros)
+promedio = suma / len(numeros)
+print(f"La suma de los números dentro de la lista es {suma}")
+print(f"El promedio de los números dentro de la lista es {promedio}")
+
+# Maxi
+lista_numeros = [10,22,55,2,88,7]
+suma = 0
+print("----Resultado----")
+print("\nNumeros: ", end = "")
+for numero in lista_numeros:
+    print(numero, end = " ")
+    suma += numero
+promedio = suma / len(lista_numeros)
+print(f"\n\nLa suma de los números dentro de la lista es: {suma}")
+print(f"\nEl promedio de los numeros dentro de la lista es: {promedio:.2f}\n")
+
+# Angeles
+print("Ejercicio 3 - Listas")
+print("------------------------------------------")
+total_suma = 0
+promedio = 0
+lista_numeros = [ 4, 5, 8, 11, 12, 24]
+print("Lista:")
+for numero in range(len(lista_numeros)):
+    print(lista_numeros[numero])
+print("------------------------------------------")
+for numero in range(len(lista_numeros)):
+    total_suma = total_suma + lista_numeros[numero]
+print(f"La suma de los números dentro de la lista es: {total_suma}")
+print("------------------------------------------")
+promedio = total_suma / len(lista_numeros)
+print(f"El promedio de los números dentro de la lista es: {promedio}")
+
+# Romina
+numeros = [10, 22, 55, 2, 88, 7]
+suma=0
+for i in numeros:
+    print(i)
+    suma=suma+i
+promedio = suma/len(numeros)
+print("SUMA: ", suma)
+print("PROMEDIO: ", promedio)
+
+# Arnold
+numero_1 = float(input("Ingrese un número: "))
+numero_2 = float(input("Ingrese otro número: "))
+numero_3 = float(input("Ingrese otro número: "))
+numero_4 = float(input("Ingrese otro número: "))
+numero_5 = float(input("Ingrese otro número: "))
+numero_6 = float(input("Ingrese otro número: "))
+numeros = [numero_1, numero_2, numero_3, numero_4, numero_5, numero_6]
+print(numeros)
+suma = sum(numeros)
+promedio = suma / len(numeros)
+print(f"La suma de los números dentro de la lista es: {suma:.2f}")
+print(f"El promedio de los números dentro de la lista es: {promedio:.2f}")
+
+# Carla
+numeros = [10, 22, 55, 2, 88, 7]
+def imprimir (numeros):
+    return numeros
+
+def suma (numeros):
+    suma = 0
+    for num in numeros:
+        suma = suma + num
+    return suma
+
+def promedio (numeros):
+    resultado = 0
+    prom = suma(numeros) / len(numeros)
+    resultado = prom
+    return resultado
+
+print("la suma de los numeros de la lista es:", suma(numeros))
+print("los numeros de la lista son: ", imprimir(numeros))
+print("el promedio de numeros dentro de la lista es: ", promedio(numeros))
+
+# Gregorio
+suma = 0 #gregorio
+lista_numeros = [44, 12, 0, 69, 2, 61, 84, 100, 122, 39, 90]
+for numero in lista_numeros: #for recorro lista
+    print(numero)
+    suma += numero #acumulador +=
+promedio = suma / len(lista_numeros)
+#len = cuentador
+print(f"La suma de los números dentro de la lista es: {suma}")
+print(f"El promedio de los números dentro de la lista es: {promedio}")
+
+# Mora -------------------------------------------------
+lista_numeros = [2, 4, 6, 8, 10, 11]
+i = 0
+longitud = len(lista_numeros)
+sumatotal = 0
+string_numeros = ""
+
+for numero in lista_numeros:
+    string_numeros = string_numeros + f'{numero} '
+
+print(f'Los numeros de la lista son: {string_numeros}')
+
+while i < longitud:
+    sumatotal= lista_numeros[i]+sumatotal
+    i= i+1
+
+promedio=sumatotal/longitud
+
+print(f"La suma total de todos los números es: {sumatotal}.")
+print(f"El promedio de los números dentro de la lista es: {promedio:.2f}.")
+
+# TODO REVISAR LA CLASE QUE VIENE
+# Rocio 
+numeros = [10, 22, 55, 2, 88, 7]
+suma=0
+print("Numeros en la lista:")
+for numero in numeros:
+    print(numero)
+    suma += numero
+cantidad_elementos = len(numeros)
+promedio = suma / cantidad_elementos
+print(f"La suma de los números dentro de la lista es: {suma}")
+print(f"El promedio de los números dentro de la lista es: {promedio}")
+
+# Nancy
+numeros = []
+suma = 0
+cantidad = int(input("¿Cuántos números desea ingresar? "))
+
+for i in range(cantidad):
+    numero = int(input(f"Ingrese el número {i + 1}: "))
+    numeros.append(numero)
+
+print("La lista es:", numeros)
+
+for i in numeros:
+    suma = suma + i
+
+promedio = suma / len(numeros)
+
+print(f"La suma de los números dentro de la lista es: {suma} ")
+
+print(f"El promedio de los números dentro de la lista es: {promedio}")
+
+# Luciano
+numeros = [10, 22, 55, 2, 88, 7]
+total = 0
+print("Imprimir cada numero:")
+for numero in numeros:
+    print(numero)
+print("-----------------")
+for numero in numeros:
+    total += numero
+print(f"La suma de los numeros dentro de la lista es: {total}")
+print("-----------------")
+for numero in numeros:
+    total += numero
+    promedio = round(total/len(numeros), 2)
+print(f"El promedio de los numeros dentro de la lista es: {promedio}")
+
+# Daiana
+lista = [10, 22, 55, 2, 88, 7]
+for numero in lista:
+    print (numero, end=", ")
+
+suma = (lista[0] + lista[1] + lista[2] + lista[3] + lista[4] + lista[5])
+promedio = suma / len(lista)
+print(f"La suma de los números dentro de la lista es: ", suma)
+print (f"El promedio de los números dentro de la lista es: ", promedio)
+
+# Judith
+print("¡Tanto tiempo! Bienvenido al programa")
+list_numbers = [10, 22, 55, 2, 88 , 7]
+sum_result = 0 #Variable para guardar la suma total
+print("Tus números de la suerte son: ")
+for i in range(len(list_numbers)):
+    sum_result += list_numbers[i] #Sumo todos los valores de la lista
+    print(list_numbers[i]) #Muestro cada valor de la lista
+average = sum_result / len(list_numbers)
+print("__________________________________________________________")
+print(f"La suma de los números dentro de la lista es: {sum_result}")
+print(f"El promedio de los números dentro de la lista es: {average:.2f}")
+
+# Edson
+numeros = [10, 22, 55, 2, 88, 7]
+print("Bienvenido al programa de suma y promedio")
+print("Los valores iniciales son:")
+for i in range(len(numeros)):
+    print(numeros[i])
+print("------------------------")
+print("A continuación calcularemos la suma de los números")
+suma = 0
+for i in range(len(numeros)):
+    suma = suma + numeros[i]
+print("La suma fue calculada correctamente")
+promedio = suma / len(numeros)
+print("------------------------")
+print("Resultados finales")
+print("La suma de los números dentro de la lista es:", suma)
+print("El promedio de los números dentro de la lista es:", promedio)
