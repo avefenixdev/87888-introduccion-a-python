@@ -130,7 +130,7 @@ def programita():
 
 programita()
 
-# Maxi -------------
+# Maxi 
 
 def pedir_nota():
     while True:
@@ -225,7 +225,6 @@ if promedio >= 4:
 else:
         print("LO SIENTO TE TOCA RECUPERATORIO")
 
-# Judith
 #Judith
 print("¡Bienvenido al programa!")
 list_notes = []
@@ -251,8 +250,6 @@ else:
         print("¡Felicidades! Aprobaste, sos un crack.")
     else:
         print("¡No siempre se puede! Vas a recuperatorio, ponele buena que vos podes.")
-
-# Arnold
 
 # Arnold
 nota = []
@@ -286,12 +283,12 @@ while True:
     else:
         agregar_nota(notas)
 
-    if cantidad_notas(nota) == 0:
-        print("No se ingresaron notas")
-    else:
-        promedio = promedio_notas(nota, cantidad_notas(nota))
-mostrar_notas(nota)
-mostrar_promedio(promedio)
+if cantidad_notas(nota) == 0:
+    print("No se ingresaron notas")
+else:
+    promedio = promedio_notas(nota, cantidad_notas(nota))
+    mostrar_notas(nota)
+    mostrar_promedio(promedio)
 
 # Noelia
 def ingreso_notas():
