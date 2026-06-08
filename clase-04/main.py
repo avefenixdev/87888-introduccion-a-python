@@ -7,24 +7,25 @@ print("Clase 04 - Introducción a Python")
 gastos = []
 total = 0
 promedio = 0
+gasto = None
 
 def agregar_gasto_lista(gasto):
     gastos.append(gasto)
 
-while True:
+while gasto != 0:
+    # 0
     gasto = pedir_gasto()
 
-    if gasto == 0:
-        break # me saca del ciclo
+    if gasto != 0:
+        agregar_gasto_lista(gasto) 
 
-    agregar_gasto_lista(gasto) 
-    
-    if not gastos:
-        print('No se cargaron gastos.')        
-    else:
-        total = calcular_total_gastos(gastos) 
-        cant_elementos = cantidad_elementos(gastos)
-        promedio = calcular_promedio_gastos(total, cant_elementos)
+
+if not gastos:
+    print('No se cargaron gastos.')        
+else:
+    total = calcular_total_gastos(gastos) 
+    cant_elementos = cantidad_elementos(gastos)
+    promedio = calcular_promedio_gastos(total, cant_elementos)
         
 mostrar_total(total)
 mostrar_promedio(promedio)
