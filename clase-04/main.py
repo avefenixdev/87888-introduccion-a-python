@@ -2,6 +2,14 @@
 from utils import cantidad_elementos, calcular_total_gastos, calcular_promedio_gastos, mostrar_total, mostrar_promedio
 from input_utils import pedir_gasto
 
+""" 
+¿Qué son los módulos en Python?
+    * Nos permiten organizar/ordenar el código
+    * Nos permiten dividir el código en diferentes archivos (para no escribir toda lógica en un solo archivo)
+    * Reutilizar código sin copiar pegar.
+    * módulos dentro de python -> datetime, random, math, os, sys
+ """
+
 print("Clase 04 - Introducción a Python")
 
 gastos = []
