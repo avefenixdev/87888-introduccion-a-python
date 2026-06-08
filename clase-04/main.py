@@ -138,3 +138,18 @@ class EdadInvalidaError(Exception):
 
 # raise -> Palabra reservada del lenguaje para lanzar una excepción
 # validar_edad.py
+def validar_edad(edad):
+    if (edad < 0):
+        raise EdadInvalidaError("La edad no puede ser negativa") # break
+    return edad
+
+# main.py
+
+try:
+    edad = int(input("Ingrese su edad: "))
+    edad_validada = validar_edad(edad)
+    print("Edad válida:" , edad_validada)
+except EdadInvalidaError as e:
+    print("Error:", e)
+except ValueError:
+    print("Eso no es un número...")
