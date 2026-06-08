@@ -1,5 +1,8 @@
-print("Clase 04 - Introducción a Python")
 
+from utils import cantidad_elementos, calcular_total_gastos, calcular_promedio_gastos, mostrar_total, mostrar_promedio
+from input_utils import pedir_gasto
+
+print("Clase 04 - Introducción a Python")
 
 gastos = []
 total = 0
@@ -8,36 +11,16 @@ promedio = 0
 def agregar_gasto_lista(gasto):
     gastos.append(gasto)
 
-def cantidad_elementos(gastos): 
-    cant_elementos = len(gastos)
-    return cant_elementos
-    
-def calcular_total_gastos(gastos): 
-    total = sum(gastos)
-    return total
-
-def calcular_promedio_gastos(total, cant_elementos):
-    promedio = total / cant_elementos
-    return promedio
-
-def mostrar_total(total): 
-    print("Gasto total:", total)
-
-def mostrar_promedio(promedio):
-    print("Gasto promedio:", promedio)
-
 while True:
-    gasto = float(input("Ingreso un gasto (0 para terminar):"))
+    gasto = pedir_gasto()
 
     if gasto == 0:
         break # me saca del ciclo
-    elif gasto < 0:
-        print('Error: El gasto no puede ser negativo.')
-    else:
-        agregar_gasto_lista(gasto) 
+
+    agregar_gasto_lista(gasto) 
     
-    if cantidad_elementos(gastos) == 0:
-        print('No se cargaron gastos.')
+    if not gastos:
+        print('No se cargaron gastos.')        
     else:
         total = calcular_total_gastos(gastos) 
         cant_elementos = cantidad_elementos(gastos)
