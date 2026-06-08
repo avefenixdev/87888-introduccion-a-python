@@ -165,7 +165,7 @@ while True:
         total = sum(gastos) # | -> def calcular_total_gastos(gastos): total
         promedio = total / len(gastos) # | def calcular_promedio_gastos(total, cant_elementos): promedio
         print("Gasto total:", total) # | def mostrar_total: void
-        print("Gasto promedio:", promedio) # def mostrar_promedio: void """
+        print("Gasto promedio:", promedio) # def mostrar_promedio: void  """
 
 print("*" * 50)
 print("*" * 50)
