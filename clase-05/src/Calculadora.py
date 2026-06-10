@@ -33,9 +33,9 @@ class Calculadora:
         self.operacion = ""
 
         for fila_idx, fila in enumerate(numeros, start=1):
-            print(fila)
+            # print(fila)
             for col_idx, numero in enumerate(fila):
-                print(numero)
+                # print(numero)
                 boton = tk.Button(
                     self.ventana,
                     text=numero,
@@ -46,7 +46,19 @@ class Calculadora:
                 boton.grid(row=fila_idx, column=col_idx, padx=2, pady=2)
 
     def al_presionar_boton(self, valor):
-        print('al_presionar_boton')
+        """ Manejar presión de botones """
+
+        if valor == "=":
+            """ cuando valor sea = """
+            resultado = eval(self.operacion)
+            self.pantalla.delete(0, tk.END)
+            self.pantalla.insert(0, resultado)
+            self.operacion = ""
+        else:
+            """ Cuando la operación sea diferente de = """
+            self.operacion += valor # "125+20"
+            self.pantalla.delete(0, tk.END)
+            self.pantalla.insert(0, self.operacion)
 
     def limpiar(self):
         print('limpiar')
